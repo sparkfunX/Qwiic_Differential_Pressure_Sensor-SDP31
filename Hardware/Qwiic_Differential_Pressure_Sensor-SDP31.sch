@@ -9226,6 +9226,11 @@ pullup resistors from the I2C bus</text>
 <text x="149.86" y="116.84" size="2.54" layer="94" font="vector" align="center">Address Jumpers</text>
 <text x="213.36" y="91.44" size="1.778" layer="97" font="vector" align="center">7-bit unshifted I2C address: 0x22</text>
 <text x="213.36" y="83.82" size="1.778" layer="97" font="vector" align="center">7-bit unshifted I2C address: 0x23</text>
+<text x="198.12" y="121.92" size="1.778" layer="97" font="vector" align="top-left">Default address: 0x21
+
+To change address:
+Open JP7
+Short JP8 or JP9</text>
 </plain>
 <instances>
 <instance part="JP3" gate="G$1" x="246.38" y="30.48" smashed="yes"/>
@@ -9533,7 +9538,7 @@ pullup resistors from the I2C bus</text>
 <wire x1="193.04" y1="157.48" x2="193.04" y2="154.94" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="IRQ" class="0">
+<net name="!INT!" class="0">
 <segment>
 <pinref part="U1" gate="G$1" pin="IRQ"/>
 <wire x1="71.12" y1="93.98" x2="73.66" y2="93.98" width="0.1524" layer="91"/>
