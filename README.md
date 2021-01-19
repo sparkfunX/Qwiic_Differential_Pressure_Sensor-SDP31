@@ -25,8 +25,8 @@ Repository Contents
 
 Documentation
 --------------
-* **[SDP31 Arduino Library](https://github.com/sparkfun/SparkFun_SDP31_Arduino_Library)** - Arduino library for the SparkFun Differential Pressure Sensor - SDP31.
-* **[Hookup Guide]()** - Basic hookup guide for the SparkFun Air Quality Sensor - SGP40.
+* **[SDP3X Arduino Library](https://github.com/sparkfun/SparkFun_SDP3x_Arduino_Library)** - Arduino library for the SparkFun Differential Pressure Sensor - SDP31.
+* **[Hookup Guide]()** - Basic hookup guide for the SparkX Differential Pressure Sensor - SDP31.
 
 Product Versions
 ----------------
