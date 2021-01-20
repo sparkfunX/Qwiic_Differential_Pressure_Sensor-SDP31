@@ -211,7 +211,7 @@
 </connects>
 <technologies>
 <technology name="">
-<attribute name="PROD_ID" value=""/>
+<attribute name="PROD_ID" value="RES-15719"/>
 <attribute name="VALUE" value="1.2K"/>
 </technology>
 </technologies>
@@ -232,7 +232,7 @@
 </connects>
 <technologies>
 <technology name="">
-<attribute name="PROD_ID" value=""/>
+<attribute name="PROD_ID" value="RES-15718"/>
 <attribute name="VALUE" value="2.7K"/>
 </technology>
 </technologies>

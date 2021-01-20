@@ -7520,7 +7520,7 @@ The SDP3x is the world's smallest differential pressure sensor. It measures just
 <technologies>
 <technology name="">
 <attribute name="DIGIKEY_PART" value="1649-SDP31-500PA-TR-1500PCSCT-ND" constant="no"/>
-<attribute name="PROD_ID" value="" constant="no"/>
+<attribute name="PROD_ID" value="IC-15720" constant="no"/>
 <attribute name="VALUE" value="SDP31" constant="no"/>
 </technology>
 </technologies>
@@ -9117,7 +9117,7 @@ The SDP3x is the world's smallest differential pressure sensor. It measures just
 </connects>
 <technologies>
 <technology name="">
-<attribute name="PROD_ID" value=""/>
+<attribute name="PROD_ID" value="RES-15719"/>
 <attribute name="VALUE" value="1.2K"/>
 </technology>
 </technologies>
@@ -9138,7 +9138,7 @@ The SDP3x is the world's smallest differential pressure sensor. It measures just
 </connects>
 <technologies>
 <technology name="">
-<attribute name="PROD_ID" value=""/>
+<attribute name="PROD_ID" value="RES-15718"/>
 <attribute name="VALUE" value="2.7K"/>
 </technology>
 </technologies>
