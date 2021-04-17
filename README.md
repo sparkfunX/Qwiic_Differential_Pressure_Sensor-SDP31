@@ -1,11 +1,11 @@
 SparkX Differential Pressure Sensor - SDP31 (Qwiic)
 ===================================================
 
-![SparkX Differential Pressure Sensor - SDP31](./img/Top.png)
-![SparkX Differential Pressure Sensor - SDP31](./img/Bottom.png)
-![SparkX Differential Pressure Sensor - SDP31](./img/Dimensions.png)
+[![SparkX Qwiic Differential Pressure Sensor SDP31 (SPX-17874)](https://cdn.sparkfun.com//assets/parts/1/7/0/7/2/17874-Qwiic_Differential_Pressure_Sensor-01.jpg)](https://www.sparkfun.com/products/17874)
 
 [*SparkX Differential Pressure Sensor - SDP31 (Qwiic) (SPX-17874)*](https://www.sparkfun.com/products/17874)
+
+![SparkX Differential Pressure Sensor - SDP31](./img/Dimensions.png)
 
 The SDP3x sensor family is Sensirion’s series of small differential pressure sensors designed for high-volume applications
 where size is a key requirement. It builds on the next generation CMOSens® sensor chip that is at the heart of Sensirion’s
