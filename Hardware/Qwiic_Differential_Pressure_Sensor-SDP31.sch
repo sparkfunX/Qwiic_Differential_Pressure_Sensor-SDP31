@@ -3,11 +3,11 @@
 <eagle version="9.6.2">
 <drawing>
 <settings>
-<setting alwaysvectorfont="yes"/>
+<setting alwaysvectorfont="no"/>
 <setting keepoldvectorfont="yes"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
+<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.05" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="no" active="no"/>
 <layer number="2" name="Route2" color="1" fill="3" visible="no" active="no"/>
@@ -65,6 +65,7 @@
 <layer number="54" name="bGND_GNDA" color="1" fill="9" visible="no" active="no"/>
 <layer number="56" name="wert" color="7" fill="1" visible="no" active="no"/>
 <layer number="57" name="tCAD" color="7" fill="1" visible="no" active="no"/>
+<layer number="58" name="bCopper" color="7" fill="1" visible="no" active="no"/>
 <layer number="59" name="tCarbon" color="7" fill="1" visible="no" active="no"/>
 <layer number="60" name="bCarbon" color="7" fill="1" visible="no" active="no"/>
 <layer number="88" name="SimResults" color="9" fill="1" visible="no" active="yes"/>
@@ -135,6 +136,12 @@
 <layer number="153" name="FabDoc1" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="154" name="FabDoc2" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="155" name="FabDoc3" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="156" name="gesam-Maß" color="1" fill="7" visible="no" active="no"/>
+<layer number="157" name="FaceMchng" color="3" fill="1" visible="no" active="no"/>
+<layer number="158" name="FaceMMeas" color="3" fill="1" visible="no" active="no"/>
+<layer number="159" name="Geh-Bear2" color="1" fill="7" visible="no" active="no"/>
+<layer number="160" name="Topologie" color="9" fill="1" visible="no" active="no"/>
+<layer number="161" name="tomplace2" color="7" fill="1" visible="no" active="no"/>
 <layer number="166" name="AntennaArea" color="7" fill="1" visible="no" active="no"/>
 <layer number="168" name="4mmHeightArea" color="7" fill="1" visible="no" active="no"/>
 <layer number="191" name="mNets" color="7" fill="1" visible="no" active="no"/>
@@ -182,127 +189,13 @@
 <layer number="249" name="Edge" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="250" name="Descript" color="3" fill="1" visible="no" active="no"/>
 <layer number="251" name="SMDround" color="12" fill="11" visible="no" active="no"/>
+<layer number="252" name="BR-BS" color="7" fill="1" visible="no" active="no"/>
+<layer number="253" name="Extra" color="7" fill="1" visible="no" active="no"/>
 <layer number="254" name="cooling" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="255" name="routoute" color="7" fill="1" visible="yes" active="yes"/>
 </layers>
 <schematic xreflabel="%F%N/%S" xrefpart="/%S.%C%R">
 <libraries>
-<library name="SparkFun">
-<packages>
-<package name="STAND-OFF">
-<description>&lt;b&gt;Stand Off&lt;/b&gt;&lt;p&gt;
-This is the mechanical footprint for a #4 phillips button head screw. Use the keepout ring to avoid running the screw head into surrounding components. SKU : PRT-00447</description>
-<wire x1="0" y1="1.8542" x2="0" y2="-1.8542" width="0.2032" layer="41" curve="-180"/>
-<wire x1="0" y1="-1.8542" x2="0" y2="1.8542" width="0.2032" layer="41" curve="-180"/>
-<wire x1="0" y1="-1.8542" x2="0" y2="1.8542" width="0.2032" layer="42" curve="180"/>
-<wire x1="0" y1="-1.8542" x2="0" y2="1.8542" width="0.2032" layer="42" curve="-180"/>
-<circle x="0" y="0" radius="2.794" width="0.127" layer="39"/>
-<hole x="0" y="0" drill="3.302"/>
-</package>
-<package name="STAND-OFF-TIGHT">
-<description>&lt;b&gt;Stand Off&lt;/b&gt;&lt;p&gt;
-This is the mechanical footprint for a #4 phillips button head screw. Use the keepout ring to avoid running the screw head into surrounding components. SKU : PRT-00447</description>
-<wire x1="0" y1="1.8542" x2="0" y2="-1.8542" width="0.2032" layer="41" curve="-180"/>
-<wire x1="0" y1="-1.8542" x2="0" y2="1.8542" width="0.2032" layer="41" curve="-180"/>
-<wire x1="0" y1="-1.8542" x2="0" y2="1.8542" width="0.2032" layer="42" curve="180"/>
-<wire x1="0" y1="-1.8542" x2="0" y2="1.8542" width="0.2032" layer="42" curve="-180"/>
-<circle x="0" y="0" radius="2.794" width="0.127" layer="39"/>
-<hole x="0" y="0" drill="3.048"/>
-</package>
-<package name="FIDUCIAL-1.5X3">
-<circle x="0" y="0" radius="0.9055" width="1.27" layer="29"/>
-<smd name="1" x="0" y="0" dx="1.5" dy="1.5" layer="1" roundness="100" cream="no"/>
-</package>
-<package name="FIDUCIAL-1X2">
-<smd name="1" x="0" y="0" dx="1" dy="1" layer="1" roundness="100" cream="no"/>
-</package>
-<package name="FIDUCIAL-1X2.5">
-<circle x="0" y="0" radius="0.9" width="1.27" layer="29"/>
-<smd name="1" x="0" y="0" dx="1" dy="1" layer="1" roundness="100" cream="no"/>
-</package>
-<package name="MICRO-FIDUCIAL">
-<smd name="1" x="0" y="0" dx="0.635" dy="0.635" layer="1" roundness="100" cream="no"/>
-</package>
-</packages>
-<symbols>
-<symbol name="GND">
-<wire x1="-1.905" y1="0" x2="1.905" y2="0" width="0.254" layer="94"/>
-<text x="-2.54" y="-2.54" size="1.778" layer="96">&gt;VALUE</text>
-<pin name="GND" x="0" y="2.54" visible="off" length="short" direction="sup" rot="R270"/>
-</symbol>
-<symbol name="STAND-OFF">
-<circle x="0" y="0" radius="1.27" width="0.254" layer="94"/>
-</symbol>
-<symbol name="FIDUCIAL">
-<wire x1="-0.762" y1="0.762" x2="0.762" y2="-0.762" width="0.254" layer="94"/>
-<wire x1="0.762" y1="0.762" x2="-0.762" y2="-0.762" width="0.254" layer="94"/>
-<circle x="0" y="0" radius="1.27" width="0.254" layer="94"/>
-</symbol>
-</symbols>
-<devicesets>
-<deviceset name="GND" prefix="GND">
-<description>&lt;b&gt;SUPPLY SYMBOL&lt;/b&gt;</description>
-<gates>
-<gate name="1" symbol="GND" x="0" y="0"/>
-</gates>
-<devices>
-<device name="">
-<technologies>
-<technology name=""/>
-</technologies>
-</device>
-</devices>
-</deviceset>
-<deviceset name="STAND-OFF" prefix="JP">
-<description>&lt;b&gt;Stand Off&lt;/b&gt;&lt;p&gt;
-This is the mechanical footprint for a #4 phillips button head screw. Use the keepout ring to avoid running the screw head into surrounding components. SKU : PRT-00447</description>
-<gates>
-<gate name="G$1" symbol="STAND-OFF" x="0" y="0"/>
-</gates>
-<devices>
-<device name="" package="STAND-OFF">
-<technologies>
-<technology name=""/>
-</technologies>
-</device>
-<device name="TIGHT" package="STAND-OFF-TIGHT">
-<technologies>
-<technology name=""/>
-</technologies>
-</device>
-</devices>
-</deviceset>
-<deviceset name="FIDUCIAL" prefix="JP">
-<description>&lt;b&gt;Fiducial Alignment Points&lt;/b&gt;
-Various fiducial points for machine vision alignment.</description>
-<gates>
-<gate name="G$1" symbol="FIDUCIAL" x="0" y="0"/>
-</gates>
-<devices>
-<device name="1.5X3" package="FIDUCIAL-1.5X3">
-<technologies>
-<technology name=""/>
-</technologies>
-</device>
-<device name="1X2" package="FIDUCIAL-1X2">
-<technologies>
-<technology name=""/>
-</technologies>
-</device>
-<device name="1X2.5" package="FIDUCIAL-1X2.5">
-<technologies>
-<technology name=""/>
-</technologies>
-</device>
-<device name="UFIDUCIAL" package="MICRO-FIDUCIAL">
-<technologies>
-<technology name=""/>
-</technologies>
-</device>
-</devices>
-</deviceset>
-</devicesets>
-</library>
 <library name="SparkFun-Resistors">
 <description>&lt;h3&gt;SparkFun Resistors&lt;/h3&gt;
 This library contains resistors. Reference designator:R. 
@@ -318,7 +211,7 @@ We've spent an enormous amount of time creating and checking these footprints an
 &lt;br&gt;
 You are welcome to use this library for commercial purposes. For attribution, we ask that when you begin to sell your device using our footprint, you email us with a link to the product being sold. We want bragging rights that we helped (in a very small part) to create your 8th world wonder. We would like the opportunity to feature your device on our homepage.</description>
 <packages>
-<package name="0603">
+<package name="0603" urn="urn:adsk.eagle:footprint:39615/1" library_version="1">
 <description>&lt;p&gt;&lt;b&gt;Generic 1608 (0603) package&lt;/b&gt;&lt;/p&gt;
 &lt;p&gt;0.2mm courtyard excess rounded to nearest 0.05mm.&lt;/p&gt;</description>
 <wire x1="-1.6" y1="0.7" x2="1.6" y2="0.7" width="0.0508" layer="39"/>
@@ -642,6 +535,60 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <technology name="">
 <attribute name="PROD_ID" value="RES-07857"/>
 <attribute name="VALUE" value="4.7k"/>
+</technology>
+</technologies>
+</device>
+<device name="-0402T-1/16W-1%" package="0402-TIGHT">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="PROD_ID" value="RES-15343" constant="no"/>
+<attribute name="VALUE" value="4.7k" constant="no"/>
+</technology>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="1.20KOHM" prefix="R">
+<description>&lt;h3&gt;1.20kΩ resistor&lt;/h3&gt;
+&lt;p&gt;A resistor is a passive two-terminal electrical component that implements electrical resistance as a circuit element. Resistors act to reduce current flow, and, at the same time, act to lower voltage levels within circuits. - Wikipedia&lt;/p&gt;</description>
+<gates>
+<gate name="G$1" symbol="RESISTOR" x="0" y="0"/>
+</gates>
+<devices>
+<device name="-0603-1/10W-1%" package="0603">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="PROD_ID" value="RES-08413"/>
+<attribute name="VALUE" value="1.20k"/>
+</technology>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="2.7KOHM" prefix="R">
+<description>&lt;h3&gt;2.7kΩ resistor&lt;/h3&gt;
+&lt;p&gt;A resistor is a passive two-terminal electrical component that implements electrical resistance as a circuit element. Resistors act to reduce current flow, and, at the same time, act to lower voltage levels within circuits. - Wikipedia&lt;/p&gt;</description>
+<gates>
+<gate name="G$1" symbol="RESISTOR" x="0" y="0"/>
+</gates>
+<devices>
+<device name="-0603-1/10W-1%" package="0603">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="PROD_ID" value="RES-16714"/>
+<attribute name="VALUE" value="2.7k"/>
 </technology>
 </technologies>
 </device>
@@ -1214,6 +1161,28 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <wire x1="0" y1="-8.89" x2="0" y2="0" width="0.2032" layer="51"/>
 <wire x1="0" y1="-8.89" x2="101.6" y2="-8.89" width="0.2032" layer="51"/>
 <text x="1.27" y="-6.35" size="1.778" layer="51" font="vector" align="top-left">(Add these comments when uploading gerbers.)</text>
+</package>
+<package name="FIDUCIAL-MICRO">
+<description>&lt;h3&gt;Fiducial - Circle, 0.25in&lt;/h3&gt;
+&lt;p&gt;Point-of-reference for pick-and-place machines and other optical instruments.&lt;/p&gt;
+&lt;p&gt;Devices using:
+&lt;ul&gt;&lt;li&gt;FIDUCIAL&lt;/li&gt;&lt;/ul&gt;&lt;/p&gt;</description>
+<smd name="1" x="0" y="0" dx="0.635" dy="0.635" layer="1" roundness="100" cream="no"/>
+</package>
+<package name="FIDUCIAL-1X2">
+<description>&lt;h3&gt;Fiducial - Circle, 1mm&lt;/h3&gt;
+&lt;p&gt;Point-of-reference for pick-and-place machines and other optical instruments.&lt;/p&gt;
+&lt;p&gt;Devices using:
+&lt;ul&gt;&lt;li&gt;FIDUCIAL&lt;/li&gt;&lt;/ul&gt;&lt;/p&gt;</description>
+<smd name="1" x="0" y="0" dx="1" dy="1" layer="1" roundness="100" cream="no"/>
+</package>
+<package name="FIDUCIAL-0.2MM">
+<description>&lt;h3&gt;Fiducial - Circle, 0.2mm&lt;/h3&gt;
+&lt;p&gt;Point-of-reference for pick-and-place machines and other optical instruments.&lt;/p&gt;
+&lt;p&gt;Devices using:
+&lt;ul&gt;&lt;li&gt;FIDUCIAL&lt;/li&gt;&lt;/ul&gt;&lt;/p&gt;</description>
+<smd name="1" x="0" y="0" dx="0.2" dy="0.2" layer="1" roundness="100" stop="no" cream="no"/>
+<circle x="0" y="0" radius="0.06" width="0.1524" layer="29"/>
 </package>
 </packages>
 <symbols>
@@ -4833,6 +4802,15 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <wire x1="22.86" y1="2.54" x2="22.86" y2="0" width="0.254" layer="94"/>
 <wire x1="22.86" y1="0" x2="0" y2="0" width="0.254" layer="94"/>
 </symbol>
+<symbol name="FIDUCIAL">
+<description>&lt;h3&gt;Fiducial&lt;/h3&gt;
+&lt;p&gt;Point-of-reference for pick-and-place machines and other optical instruments.&lt;/p&gt;
+&lt;p&gt;Devices using:
+&lt;ul&gt;&lt;li&gt;FIDUCIAL&lt;/li&gt;&lt;/ul&gt;&lt;/p&gt;</description>
+<wire x1="-0.762" y1="0.762" x2="0.762" y2="-0.762" width="0.254" layer="94"/>
+<wire x1="0.762" y1="0.762" x2="-0.762" y2="-0.762" width="0.254" layer="94"/>
+<circle x="0" y="0" radius="1.27" width="0.254" layer="94"/>
+</symbol>
 </symbols>
 <devicesets>
 <deviceset name="FRAME-LETTER" prefix="FRAME">
@@ -4943,6 +4921,30 @@ You are welcome to use this library for commercial purposes. For attribution, we
 </technologies>
 </device>
 <device name="-PRODUCTION" package="PRODUCTION_INSTRUCTIONS">
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="FIDUCIAL" prefix="FD">
+<description>&lt;h3&gt;Fiducial Alignment Points&lt;/h3&gt;
+&lt;p&gt;Point-of-reference for pick-and-place machines and other optical instruments.&lt;/p&gt;</description>
+<gates>
+<gate name="G$1" symbol="FIDUCIAL" x="0" y="0"/>
+</gates>
+<devices>
+<device name="1X2" package="FIDUCIAL-1X2">
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+<device name="UFIDUCIAL" package="FIDUCIAL-MICRO">
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+<device name="0.2MM" package="FIDUCIAL-0.2MM">
 <technologies>
 <technology name=""/>
 </technologies>
@@ -7387,148 +7389,6 @@ You are welcome to use this library for commercial purposes. For attribution, we
 </deviceset>
 </devicesets>
 </library>
-<library name="New-Parts_SparkFun-Sensors">
-<packages>
-<package name="SDP31">
-<description>SDP31</description>
-<smd name="5" x="-1" y="-2.075" dx="0.75" dy="0.4" layer="1" rot="R90"/>
-<smd name="6" x="0" y="-2.075" dx="0.75" dy="0.4" layer="1" rot="R90"/>
-<smd name="4" x="-2" y="-2.075" dx="0.75" dy="0.4" layer="1" rot="R90"/>
-<smd name="3" x="-2.825" y="-1" dx="0.75" dy="0.4" layer="1"/>
-<smd name="2" x="-2.825" y="0" dx="0.75" dy="0.4" layer="1"/>
-<smd name="1" x="-2.825" y="1" dx="0.75" dy="0.4" layer="1"/>
-<polygon width="0.0001" layer="1" spacing="0.254">
-<vertex x="-0.9" y="0.4"/>
-<vertex x="0.9" y="0.4"/>
-<vertex x="0.9" y="1.3"/>
-<vertex x="-0.6" y="1.3"/>
-<vertex x="-0.9" y="1"/>
-</polygon>
-<wire x1="-4.25" y1="-2.75" x2="4.25" y2="-2.75" width="0.1" layer="51"/>
-<wire x1="4.25" y1="-2.75" x2="4.25" y2="2.75" width="0.1" layer="51"/>
-<wire x1="4.25" y1="2.75" x2="-4.25" y2="2.75" width="0.1" layer="51"/>
-<wire x1="-4.25" y1="2.75" x2="-4.25" y2="-2.75" width="0.1" layer="51"/>
-<rectangle x1="-0.8" y1="-1.2" x2="0.8" y2="-0.5" layer="31"/>
-<smd name="DIEPAD1" x="0" y="0.85" dx="0.6096" dy="0.3048" layer="1" rot="R180" stop="no" cream="no"/>
-<text x="-2.02" y="3.024" size="0.8128" layer="25" font="vector">&gt;Name</text>
-<text x="-2.02" y="-3.99" size="0.8128" layer="27" font="vector">&gt;Value</text>
-<circle x="-2.15" y="-0.65" radius="1" width="0.1" layer="51"/>
-<hole x="-3.65" y="-2.15" drill="0.7"/>
-<hole x="3.65" y="-2.15" drill="0.7"/>
-<hole x="3.65" y="2.15" drill="0.7"/>
-<wire x1="-4.25" y1="-2.75" x2="4.25" y2="-2.75" width="0.2032" layer="21"/>
-<wire x1="-4.25" y1="2.75" x2="-4.25" y2="-2.75" width="0.2032" layer="21"/>
-<wire x1="4.25" y1="-2.75" x2="4.25" y2="2.75" width="0.2032" layer="21"/>
-<wire x1="4.25" y1="2.75" x2="-4.25" y2="2.75" width="0.2032" layer="21"/>
-<rectangle x1="-3" y1="-0.2" x2="-2.45" y2="0.2" layer="51"/>
-<rectangle x1="-3" y1="0.8" x2="-2.45" y2="1.2" layer="51"/>
-<rectangle x1="-3" y1="-1.2" x2="-2.45" y2="-0.8" layer="51"/>
-<rectangle x1="2.45" y1="-0.2" x2="3" y2="0.2" layer="51"/>
-<rectangle x1="2.45" y1="0.8" x2="3" y2="1.2" layer="51"/>
-<rectangle x1="2.45" y1="-1.2" x2="3" y2="-0.8" layer="51"/>
-<wire x1="-3" y1="2.25" x2="3" y2="2.25" width="0.1" layer="51"/>
-<wire x1="-3" y1="-2.25" x2="3" y2="-2.25" width="0.1" layer="51"/>
-<wire x1="-3" y1="2.25" x2="-3" y2="-2.25" width="0.1" layer="51"/>
-<wire x1="3" y1="2.25" x2="3" y2="-2.25" width="0.1" layer="51"/>
-<rectangle x1="-0.2" y1="-2.25" x2="0.2" y2="-1.7" layer="51"/>
-<rectangle x1="0.8" y1="-2.25" x2="1.2" y2="-1.7" layer="51"/>
-<rectangle x1="1.8" y1="-2.25" x2="2.2" y2="-1.7" layer="51"/>
-<rectangle x1="-1.2" y1="-2.25" x2="-0.8" y2="-1.7" layer="51"/>
-<rectangle x1="-2.2" y1="-2.25" x2="-1.8" y2="-1.7" layer="51"/>
-<rectangle x1="-0.2" y1="1.7" x2="0.2" y2="2.25" layer="51"/>
-<rectangle x1="-1.2" y1="1.7" x2="-0.8" y2="2.25" layer="51"/>
-<rectangle x1="-2.2" y1="1.7" x2="-1.8" y2="2.25" layer="51"/>
-<rectangle x1="0.8" y1="1.7" x2="1.2" y2="2.25" layer="51"/>
-<rectangle x1="1.8" y1="1.7" x2="2.2" y2="2.25" layer="51"/>
-<smd name="7" x="1" y="-2.075" dx="0.75" dy="0.4" layer="1" rot="R90"/>
-<smd name="8" x="2" y="-2.075" dx="0.75" dy="0.4" layer="1" rot="R90"/>
-<smd name="9" x="2.825" y="-1" dx="0.75" dy="0.4" layer="1" rot="R180"/>
-<smd name="10" x="2.825" y="0" dx="0.75" dy="0.4" layer="1" rot="R180"/>
-<smd name="11" x="2.825" y="1" dx="0.75" dy="0.4" layer="1" rot="R180"/>
-<smd name="12" x="2" y="2.075" dx="0.75" dy="0.4" layer="1" rot="R270"/>
-<smd name="13" x="1" y="2.075" dx="0.75" dy="0.4" layer="1" rot="R270"/>
-<smd name="14" x="0" y="2.075" dx="0.75" dy="0.4" layer="1" rot="R270"/>
-<smd name="15" x="-1" y="2.075" dx="0.75" dy="0.4" layer="1" rot="R270"/>
-<smd name="16" x="-2" y="2.075" dx="0.75" dy="0.4" layer="1" rot="R270"/>
-<circle x="2.15" y="-0.65" radius="1" width="0.1" layer="51"/>
-<text x="1.55" y="-1.15" size="1.016" layer="51" ratio="12">L</text>
-<text x="-2.1" y="-1.15" size="1.016" layer="51" ratio="12">H</text>
-<polygon width="0.0001" layer="29" spacing="0.254">
-<vertex x="-0.95" y="0.35"/>
-<vertex x="0.95" y="0.35"/>
-<vertex x="0.95" y="1.35"/>
-<vertex x="-0.625" y="1.35"/>
-<vertex x="-0.95" y="1.025"/>
-</polygon>
-<polygon width="0.0001" layer="31" spacing="0.254">
-<vertex x="-0.8" y="0.5"/>
-<vertex x="0.8" y="0.5"/>
-<vertex x="0.8" y="1.2"/>
-<vertex x="-0.5" y="1.2"/>
-<vertex x="-0.8" y="0.9"/>
-</polygon>
-<rectangle x1="-0.95" y1="-1.35" x2="0.95" y2="-0.35" layer="29"/>
-<smd name="DIEPAD2" x="0" y="-0.85" dx="0.6096" dy="0.3048" layer="1" rot="R180" stop="no" cream="no"/>
-<circle x="0" y="0" radius="0.175" width="0.35" layer="41"/>
-<polygon width="0.0001" layer="1">
-<vertex x="0.9" y="-1.3"/>
-<vertex x="-0.9" y="-1.3"/>
-<vertex x="-0.9" y="-0.4"/>
-<vertex x="0.9" y="-0.4"/>
-</polygon>
-</package>
-</packages>
-<symbols>
-<symbol name="SDP31">
-<description>SDP31</description>
-<wire x1="7.62" y1="-7.62" x2="7.62" y2="5.08" width="0.254" layer="94"/>
-<wire x1="7.62" y1="5.08" x2="-7.62" y2="5.08" width="0.254" layer="94"/>
-<wire x1="-7.62" y1="5.08" x2="-7.62" y2="-7.62" width="0.254" layer="94"/>
-<wire x1="-7.62" y1="-7.62" x2="7.62" y2="-7.62" width="0.254" layer="94"/>
-<pin name="VDD" x="-10.16" y="2.54" visible="pin" length="short" direction="pwr"/>
-<pin name="GND" x="-10.16" y="-5.08" visible="pin" length="short" direction="pwr"/>
-<pin name="SDA" x="10.16" y="2.54" visible="pin" length="short" rot="R180"/>
-<pin name="SCL" x="10.16" y="0" visible="pin" length="short" rot="R180"/>
-<text x="-7.62" y="5.588" size="1.778" layer="95">&gt;Name</text>
-<text x="-7.62" y="-9.906" size="1.778" layer="96">&gt;Value</text>
-<pin name="IRQ" x="10.16" y="-2.54" visible="pin" length="short" direction="out" rot="R180"/>
-<pin name="ADDR" x="10.16" y="-5.08" visible="pin" length="short" rot="R180"/>
-<pin name="NC" x="-10.16" y="-1.27" visible="pin" length="short" direction="nc"/>
-</symbol>
-</symbols>
-<devicesets>
-<deviceset name="SDP31" prefix="U">
-<description>&lt;strong&gt;Differential Pressure Sensor SDP3x&lt;/strong&gt;
-&lt;br&gt;
-The World's Smallest Differential Pressure Sensor
-&lt;br&gt;
-The SDP3x is the world's smallest differential pressure sensor. It measures just 5 mm x 8 mm x 5 mm, opening up new dimensions of integration and application possibilities. The sensor is based on the next generation of the CMOSens® sensor chip and is the heart of Sensirion's new sensor platform for measuring differential pressure and mass flow.</description>
-<gates>
-<gate name="G$1" symbol="SDP31" x="0" y="0"/>
-</gates>
-<devices>
-<device name="" package="SDP31">
-<connects>
-<connect gate="G$1" pin="ADDR" pad="9"/>
-<connect gate="G$1" pin="GND" pad="1 2 3 6 10 11 DIEPAD1 DIEPAD2"/>
-<connect gate="G$1" pin="IRQ" pad="4"/>
-<connect gate="G$1" pin="NC" pad="12 13 14 15 16"/>
-<connect gate="G$1" pin="SCL" pad="5"/>
-<connect gate="G$1" pin="SDA" pad="8"/>
-<connect gate="G$1" pin="VDD" pad="7"/>
-</connects>
-<technologies>
-<technology name="">
-<attribute name="DIGIKEY_PART" value="1649-SDP31-500PA-TR-1500PCSCT-ND" constant="no"/>
-<attribute name="PROD_ID" value="IC-15720" constant="no"/>
-<attribute name="VALUE" value="SDP31" constant="no"/>
-</technology>
-</technologies>
-</device>
-</devices>
-</deviceset>
-</devicesets>
-</library>
 <library name="SparkX">
 <packages>
 <package name="SPARKX-LARGE">
@@ -9065,82 +8925,236 @@ The SDP3x is the world's smallest differential pressure sensor. It measures just
 </deviceset>
 </devicesets>
 </library>
-<library name="New-Parts_SparkFun-Resistors">
+<library name="SparkFun-Sensors">
+<description>&lt;h3&gt;SparkFun Sensors&lt;/h3&gt;
+This library contains sensors- accelerometers, gyros, compasses, magnetometers, light sensors, imagers, temp sensors, etc.
+&lt;br&gt;
+&lt;br&gt;
+We've spent an enormous amount of time creating and checking these footprints and parts, but it is &lt;b&gt; the end user's responsibility&lt;/b&gt; to ensure correctness and suitablity for a given componet or application.
+&lt;br&gt;
+&lt;br&gt;If you enjoy using this library, please buy one of our products at &lt;a href=" www.sparkfun.com"&gt;SparkFun.com&lt;/a&gt;.
+&lt;br&gt;
+&lt;br&gt;
+&lt;b&gt;Licensing:&lt;/b&gt; Creative Commons ShareAlike 4.0 International - https://creativecommons.org/licenses/by-sa/4.0/
+&lt;br&gt;
+&lt;br&gt;
+You are welcome to use this library for commercial purposes. For attribution, we ask that when you begin to sell your device using our footprint, you email us with a link to the product being sold. We want bragging rights that we helped (in a very small part) to create your 8th world wonder. We would like the opportunity to feature your device on our homepage.</description>
 <packages>
-<package name="0603">
-<description>&lt;p&gt;&lt;b&gt;Generic 1608 (0603) package&lt;/b&gt;&lt;/p&gt;
-&lt;p&gt;0.2mm courtyard excess rounded to nearest 0.05mm.&lt;/p&gt;</description>
-<wire x1="-1.6" y1="0.7" x2="1.6" y2="0.7" width="0.0508" layer="39"/>
-<wire x1="1.6" y1="0.7" x2="1.6" y2="-0.7" width="0.0508" layer="39"/>
-<wire x1="1.6" y1="-0.7" x2="-1.6" y2="-0.7" width="0.0508" layer="39"/>
-<wire x1="-1.6" y1="-0.7" x2="-1.6" y2="0.7" width="0.0508" layer="39"/>
-<wire x1="-0.356" y1="0.432" x2="0.356" y2="0.432" width="0.1016" layer="51"/>
-<wire x1="-0.356" y1="-0.419" x2="0.356" y2="-0.419" width="0.1016" layer="51"/>
-<smd name="1" x="-0.85" y="0" dx="1.1" dy="1" layer="1"/>
-<smd name="2" x="0.85" y="0" dx="1.1" dy="1" layer="1"/>
-<text x="0" y="0.762" size="0.6096" layer="25" font="vector" ratio="20" align="bottom-center">&gt;NAME</text>
-<text x="0" y="-0.762" size="0.6096" layer="27" font="vector" ratio="20" align="top-center">&gt;VALUE</text>
-<rectangle x1="-0.8382" y1="-0.4699" x2="-0.3381" y2="0.4801" layer="51"/>
-<rectangle x1="0.3302" y1="-0.4699" x2="0.8303" y2="0.4801" layer="51"/>
-<rectangle x1="-0.1999" y1="-0.3" x2="0.1999" y2="0.3" layer="35"/>
+<package name="SDP3X">
+<description>SDP31</description>
+<smd name="5" x="-1" y="-2.075" dx="0.75" dy="0.4" layer="1" rot="R90"/>
+<smd name="6" x="0" y="-2.075" dx="0.75" dy="0.4" layer="1" rot="R90"/>
+<smd name="4" x="-2" y="-2.075" dx="0.75" dy="0.4" layer="1" rot="R90"/>
+<smd name="3" x="-2.825" y="-1" dx="0.75" dy="0.4" layer="1"/>
+<smd name="2" x="-2.825" y="0" dx="0.75" dy="0.4" layer="1"/>
+<smd name="1" x="-2.825" y="1" dx="0.75" dy="0.4" layer="1"/>
+<polygon width="0.0001" layer="1" spacing="0.254">
+<vertex x="-0.9" y="0.4"/>
+<vertex x="0.9" y="0.4"/>
+<vertex x="0.9" y="1.3"/>
+<vertex x="-0.6" y="1.3"/>
+<vertex x="-0.9" y="1"/>
+</polygon>
+<wire x1="-4.25" y1="-2.75" x2="4.25" y2="-2.75" width="0.1" layer="51"/>
+<wire x1="4.25" y1="-2.75" x2="4.25" y2="2.75" width="0.1" layer="51"/>
+<wire x1="4.25" y1="2.75" x2="-4.25" y2="2.75" width="0.1" layer="51"/>
+<wire x1="-4.25" y1="2.75" x2="-4.25" y2="-2.75" width="0.1" layer="51"/>
+<rectangle x1="-0.8" y1="-1.2" x2="0.8" y2="-0.5" layer="31"/>
+<smd name="DIEPAD1" x="0" y="0.85" dx="0.6096" dy="0.3048" layer="1" rot="R180" stop="no" cream="no"/>
+<text x="-2.02" y="3.024" size="0.8128" layer="25" font="vector">&gt;Name</text>
+<text x="-2.02" y="-3.99" size="0.8128" layer="27" font="vector">&gt;Value</text>
+<circle x="-2.15" y="-0.65" radius="1" width="0.1" layer="51"/>
+<hole x="-3.65" y="-2.15" drill="0.7"/>
+<hole x="3.65" y="-2.15" drill="0.7"/>
+<hole x="3.65" y="2.15" drill="0.7"/>
+<wire x1="-4.25" y1="-2.75" x2="4.25" y2="-2.75" width="0.2032" layer="21"/>
+<wire x1="-4.25" y1="2.75" x2="-4.25" y2="-2.75" width="0.2032" layer="21"/>
+<wire x1="4.25" y1="-2.75" x2="4.25" y2="2.75" width="0.2032" layer="21"/>
+<wire x1="4.25" y1="2.75" x2="-4.25" y2="2.75" width="0.2032" layer="21"/>
+<rectangle x1="-3" y1="-0.2" x2="-2.45" y2="0.2" layer="51"/>
+<rectangle x1="-3" y1="0.8" x2="-2.45" y2="1.2" layer="51"/>
+<rectangle x1="-3" y1="-1.2" x2="-2.45" y2="-0.8" layer="51"/>
+<rectangle x1="2.45" y1="-0.2" x2="3" y2="0.2" layer="51"/>
+<rectangle x1="2.45" y1="0.8" x2="3" y2="1.2" layer="51"/>
+<rectangle x1="2.45" y1="-1.2" x2="3" y2="-0.8" layer="51"/>
+<wire x1="-3" y1="2.25" x2="3" y2="2.25" width="0.1" layer="51"/>
+<wire x1="-3" y1="-2.25" x2="3" y2="-2.25" width="0.1" layer="51"/>
+<wire x1="-3" y1="2.25" x2="-3" y2="-2.25" width="0.1" layer="51"/>
+<wire x1="3" y1="2.25" x2="3" y2="-2.25" width="0.1" layer="51"/>
+<rectangle x1="-0.2" y1="-2.25" x2="0.2" y2="-1.7" layer="51"/>
+<rectangle x1="0.8" y1="-2.25" x2="1.2" y2="-1.7" layer="51"/>
+<rectangle x1="1.8" y1="-2.25" x2="2.2" y2="-1.7" layer="51"/>
+<rectangle x1="-1.2" y1="-2.25" x2="-0.8" y2="-1.7" layer="51"/>
+<rectangle x1="-2.2" y1="-2.25" x2="-1.8" y2="-1.7" layer="51"/>
+<rectangle x1="-0.2" y1="1.7" x2="0.2" y2="2.25" layer="51"/>
+<rectangle x1="-1.2" y1="1.7" x2="-0.8" y2="2.25" layer="51"/>
+<rectangle x1="-2.2" y1="1.7" x2="-1.8" y2="2.25" layer="51"/>
+<rectangle x1="0.8" y1="1.7" x2="1.2" y2="2.25" layer="51"/>
+<rectangle x1="1.8" y1="1.7" x2="2.2" y2="2.25" layer="51"/>
+<smd name="7" x="1" y="-2.075" dx="0.75" dy="0.4" layer="1" rot="R90"/>
+<smd name="8" x="2" y="-2.075" dx="0.75" dy="0.4" layer="1" rot="R90"/>
+<smd name="9" x="2.825" y="-1" dx="0.75" dy="0.4" layer="1" rot="R180"/>
+<smd name="10" x="2.825" y="0" dx="0.75" dy="0.4" layer="1" rot="R180"/>
+<smd name="11" x="2.825" y="1" dx="0.75" dy="0.4" layer="1" rot="R180"/>
+<smd name="12" x="2" y="2.075" dx="0.75" dy="0.4" layer="1" rot="R270"/>
+<smd name="13" x="1" y="2.075" dx="0.75" dy="0.4" layer="1" rot="R270"/>
+<smd name="14" x="0" y="2.075" dx="0.75" dy="0.4" layer="1" rot="R270"/>
+<smd name="15" x="-1" y="2.075" dx="0.75" dy="0.4" layer="1" rot="R270"/>
+<smd name="16" x="-2" y="2.075" dx="0.75" dy="0.4" layer="1" rot="R270"/>
+<circle x="2.15" y="-0.65" radius="1" width="0.1" layer="51"/>
+<text x="1.55" y="-1.15" size="1.016" layer="51" ratio="12">L</text>
+<text x="-2.1" y="-1.15" size="1.016" layer="51" ratio="12">H</text>
+<polygon width="0.0001" layer="29" spacing="0.254">
+<vertex x="-0.95" y="0.35"/>
+<vertex x="0.95" y="0.35"/>
+<vertex x="0.95" y="1.35"/>
+<vertex x="-0.625" y="1.35"/>
+<vertex x="-0.95" y="1.025"/>
+</polygon>
+<polygon width="0.0001" layer="31" spacing="0.254">
+<vertex x="-0.8" y="0.5"/>
+<vertex x="0.8" y="0.5"/>
+<vertex x="0.8" y="1.2"/>
+<vertex x="-0.5" y="1.2"/>
+<vertex x="-0.8" y="0.9"/>
+</polygon>
+<rectangle x1="-0.95" y1="-1.35" x2="0.95" y2="-0.35" layer="29"/>
+<smd name="DIEPAD2" x="0" y="-0.85" dx="0.6096" dy="0.3048" layer="1" rot="R180" stop="no" cream="no"/>
+<circle x="0" y="0" radius="0.175" width="0.35" layer="41"/>
+<polygon width="0.0001" layer="1">
+<vertex x="0.9" y="-1.3"/>
+<vertex x="-0.9" y="-1.3"/>
+<vertex x="-0.9" y="-0.4"/>
+<vertex x="0.9" y="-0.4"/>
+</polygon>
 </package>
 </packages>
 <symbols>
-<symbol name="RESISTOR">
-<wire x1="-2.54" y1="0" x2="-2.159" y2="1.016" width="0.1524" layer="94"/>
-<wire x1="-2.159" y1="1.016" x2="-1.524" y2="-1.016" width="0.1524" layer="94"/>
-<wire x1="-1.524" y1="-1.016" x2="-0.889" y2="1.016" width="0.1524" layer="94"/>
-<wire x1="-0.889" y1="1.016" x2="-0.254" y2="-1.016" width="0.1524" layer="94"/>
-<wire x1="-0.254" y1="-1.016" x2="0.381" y2="1.016" width="0.1524" layer="94"/>
-<wire x1="0.381" y1="1.016" x2="1.016" y2="-1.016" width="0.1524" layer="94"/>
-<wire x1="1.016" y1="-1.016" x2="1.651" y2="1.016" width="0.1524" layer="94"/>
-<wire x1="1.651" y1="1.016" x2="2.286" y2="-1.016" width="0.1524" layer="94"/>
-<wire x1="2.286" y1="-1.016" x2="2.54" y2="0" width="0.1524" layer="94"/>
-<text x="0" y="1.524" size="1.778" layer="95" font="vector" align="bottom-center">&gt;NAME</text>
-<text x="0" y="-1.524" size="1.778" layer="96" font="vector" align="top-center">&gt;VALUE</text>
-<pin name="2" x="5.08" y="0" visible="off" length="short" direction="pas" swaplevel="1" rot="R180"/>
-<pin name="1" x="-5.08" y="0" visible="off" length="short" direction="pas" swaplevel="1"/>
+<symbol name="SDP3X">
+<description>SDP3X</description>
+<wire x1="7.62" y1="-7.62" x2="7.62" y2="5.08" width="0.254" layer="94"/>
+<wire x1="7.62" y1="5.08" x2="-7.62" y2="5.08" width="0.254" layer="94"/>
+<wire x1="-7.62" y1="5.08" x2="-7.62" y2="-7.62" width="0.254" layer="94"/>
+<wire x1="-7.62" y1="-7.62" x2="7.62" y2="-7.62" width="0.254" layer="94"/>
+<pin name="VDD" x="-10.16" y="2.54" visible="pin" length="short" direction="pwr"/>
+<pin name="GND" x="-10.16" y="-5.08" visible="pin" length="short" direction="pwr"/>
+<pin name="SDA" x="10.16" y="2.54" visible="pin" length="short" rot="R180"/>
+<pin name="SCL" x="10.16" y="0" visible="pin" length="short" rot="R180"/>
+<text x="-7.62" y="5.08" size="1.778" layer="95">&gt;Name</text>
+<text x="-7.62" y="-9.906" size="1.778" layer="96">&gt;Value</text>
+<pin name="IRQ" x="10.16" y="-2.54" visible="pin" length="short" direction="out" rot="R180"/>
+<pin name="ADDR" x="10.16" y="-5.08" visible="pin" length="short" rot="R180"/>
 </symbol>
 </symbols>
 <devicesets>
-<deviceset name="1.2K" prefix="R">
-<description>&lt;h3&gt;1.2KΩ resistor&lt;/h3&gt;
-&lt;p&gt;A resistor is a passive two-terminal electrical component that implements electrical resistance as a circuit element. Resistors act to reduce current flow, and, at the same time, act to lower voltage levels within circuits. - Wikipedia&lt;/p&gt;</description>
+<deviceset name="SDP3X" prefix="U">
+<description>&lt;strong&gt;Differential Pressure Sensor SDP3x&lt;/strong&gt;
+&lt;br&gt;
+The World's Smallest Differential Pressure Sensor
+&lt;br&gt;
+The SDP3x is the world's smallest differential pressure sensor. It measures just 5 mm x 8 mm x 5 mm, opening up new dimensions of integration and application possibilities. The sensor is based on the next generation of the CMOSens® sensor chip and is the heart of Sensirion's new sensor platform for measuring differential pressure and mass flow.</description>
 <gates>
-<gate name="G$1" symbol="RESISTOR" x="0" y="0"/>
+<gate name="G$1" symbol="SDP3X" x="0" y="0"/>
 </gates>
 <devices>
-<device name="-0603-1/10W-1%" package="0603">
+<device name="_SDP31" package="SDP3X">
 <connects>
-<connect gate="G$1" pin="1" pad="1"/>
-<connect gate="G$1" pin="2" pad="2"/>
+<connect gate="G$1" pin="ADDR" pad="9"/>
+<connect gate="G$1" pin="GND" pad="1 2 3 6 10 11 DIEPAD1 DIEPAD2"/>
+<connect gate="G$1" pin="IRQ" pad="4"/>
+<connect gate="G$1" pin="SCL" pad="5"/>
+<connect gate="G$1" pin="SDA" pad="8"/>
+<connect gate="G$1" pin="VDD" pad="7"/>
 </connects>
 <technologies>
 <technology name="">
-<attribute name="PROD_ID" value="RES-15719"/>
-<attribute name="VALUE" value="1.2K"/>
+<attribute name="PROD_ID" value="IC-15720" constant="no"/>
+<attribute name="VALUE" value="SDP31" constant="no"/>
 </technology>
 </technologies>
 </device>
 </devices>
 </deviceset>
-<deviceset name="2.7K" prefix="R">
-<description>&lt;h3&gt;2.7KΩ resistor&lt;/h3&gt;
-&lt;p&gt;A resistor is a passive two-terminal electrical component that implements electrical resistance as a circuit element. Resistors act to reduce current flow, and, at the same time, act to lower voltage levels within circuits. - Wikipedia&lt;/p&gt;</description>
+</devicesets>
+</library>
+<library name="SparkFun-Hardware">
+<description>&lt;h3&gt;SparkFun Electronics' preferred foot prints&lt;/h3&gt;
+This library contains board components that are not electrical in nature, such as stand-offs, magnets, and Actobotics. 
+&lt;br&gt;
+&lt;br&gt;
+We've spent an enormous amount of time creating and checking these footprints and parts, but it is &lt;b&gt; the end user's responsibility&lt;/b&gt; to ensure correctness and suitablity for a given componet or application. 
+&lt;br&gt;
+&lt;br&gt;If you enjoy using this library, please buy one of our products at &lt;a href=" www.sparkfun.com"&gt;SparkFun.com&lt;/a&gt;.
+&lt;br&gt;
+&lt;br&gt;
+&lt;b&gt;Licensing:&lt;/b&gt; Creative Commons ShareAlike 4.0 International - https://creativecommons.org/licenses/by-sa/4.0/ 
+&lt;br&gt;
+&lt;br&gt;
+You are welcome to use this library for commercial purposes. For attribution, we ask that when you begin to sell your device using our footprint, you email us with a link to the product being sold. We want bragging rights that we helped (in a very small part) to create your 8th world wonder. We would like the opportunity to feature your device on our homepage.</description>
+<packages>
+<package name="STAND-OFF">
+<description>&lt;h3&gt;Standoff (#4 Screw)&lt;/h3&gt;
+&lt;p&gt;This is the mechanical footprint for a #4 phillips button head screw. Use the keepout ring to avoid running the screw head into surrounding components.&lt;/p&gt;
+&lt;h4&gt;Devices Using&lt;/h4&gt;
+&lt;ul&gt;&lt;li&gt;STAND-OFF&lt;/li&gt;&lt;/ul&gt;</description>
+<wire x1="0" y1="1.8542" x2="0" y2="-1.8542" width="0.2032" layer="41" curve="-180"/>
+<wire x1="0" y1="-1.8542" x2="0" y2="1.8542" width="0.2032" layer="41" curve="-180"/>
+<wire x1="0" y1="-1.8542" x2="0" y2="1.8542" width="0.2032" layer="42" curve="180"/>
+<wire x1="0" y1="-1.8542" x2="0" y2="1.8542" width="0.2032" layer="42" curve="-180"/>
+<circle x="0" y="0" radius="2.794" width="0.127" layer="39"/>
+<hole x="0" y="0" drill="3.302"/>
+<text x="0" y="2.032" size="0.6096" layer="25" font="vector" ratio="20" align="bottom-center">&gt;NAME</text>
+<text x="0" y="-2.032" size="0.6096" layer="27" font="vector" ratio="20" align="top-center">&gt;VALUE</text>
+</package>
+<package name="STAND-OFF-TIGHT">
+<description>&lt;h3&gt;Standoff (#4 Screw) - Tight fit around screw body&lt;/h3&gt;
+&lt;p&gt;This is the mechanical footprint for a #4 phillips button head screw. Use the keepout ring to avoid running the screw head into surrounding components.&lt;/p&gt;
+&lt;h4&gt;Devices Using&lt;/h4&gt;
+&lt;ul&gt;&lt;li&gt;STAND-OFF&lt;/li&gt;&lt;/ul&gt;</description>
+<wire x1="0" y1="1.8542" x2="0" y2="-1.8542" width="0.2032" layer="41" curve="-180"/>
+<wire x1="0" y1="-1.8542" x2="0" y2="1.8542" width="0.2032" layer="41" curve="-180"/>
+<wire x1="0" y1="-1.8542" x2="0" y2="1.8542" width="0.2032" layer="42" curve="180"/>
+<wire x1="0" y1="-1.8542" x2="0" y2="1.8542" width="0.2032" layer="42" curve="-180"/>
+<circle x="0" y="0" radius="2.794" width="0.127" layer="39"/>
+<hole x="0" y="0" drill="3.048"/>
+<text x="0" y="1.651" size="0.6096" layer="25" font="vector" ratio="20" align="bottom-center">&gt;NAME</text>
+<text x="0" y="-1.651" size="0.6096" layer="27" font="vector" ratio="20" align="top-center">&gt;VALUE</text>
+</package>
+</packages>
+<symbols>
+<symbol name="STAND-OFF">
+<description>&lt;h3&gt;Stand-Off Drill Hole&lt;/h3&gt;</description>
+<circle x="0" y="0" radius="1.27" width="0.254" layer="94"/>
+</symbol>
+</symbols>
+<devicesets>
+<deviceset name="STAND-OFF" prefix="H">
+<description>&lt;h3&gt;Stand Off&lt;/h3&gt;
+&lt;p&gt;Drill holes for mechanically mounting via screws, standoffs, etc.&lt;/p&gt;
+&lt;p&gt;Note: Use the keepout ring to avoid running the screw head into surrounding components.
+&lt;h4&gt;Variant Overviews&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;b&gt;STAND-OFF&lt;/b&gt; - Mechanical footprint for a &lt;b&gt;#4 phillips button head&lt;/b&gt; screw.&lt;/li&gt;
+&lt;li&gt;&lt;b&gt;STAND-OFF-TIGHT&lt;/b&gt; - Mechanical footprint for a &lt;b&gt;#4 phillips button head&lt;/b&gt; screw, &lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4&gt;Example SparkFun Products&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://www.sparkfun.com/products/10453"&gt;Screw - Phillips Head (1/4", 4-40, 10 pack)&lt;/a&gt; (PRT-10453)&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://www.sparkfun.com/products/10452"&gt;Screw - Phillips Head (1/2", 4-40, 10 pack)&lt;/a&gt; (PRT-10452)&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://www.sparkfun.com/products/10451"&gt;Screw - Phillips Head (3/4", 4-40, 10 pack)&lt;/a&gt; (PRT-10451)&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://www.sparkfun.com/products/10450"&gt;Screw - Phillips Head (1", 4-40, 10 pack)&lt;/a&gt; (PRT-10450)&lt;/li&gt;</description>
 <gates>
-<gate name="G$1" symbol="RESISTOR" x="0" y="0"/>
+<gate name="G$1" symbol="STAND-OFF" x="0" y="0"/>
 </gates>
 <devices>
-<device name="-0603-1/10W-1%" package="0603">
-<connects>
-<connect gate="G$1" pin="1" pad="1"/>
-<connect gate="G$1" pin="2" pad="2"/>
-</connects>
+<device name="" package="STAND-OFF">
 <technologies>
-<technology name="">
-<attribute name="PROD_ID" value="RES-15718"/>
-<attribute name="VALUE" value="2.7K"/>
-</technology>
+<technology name=""/>
+</technologies>
+</device>
+<device name="TIGHT" package="STAND-OFF-TIGHT">
+<technologies>
+<technology name=""/>
 </technologies>
 </device>
 </devices>
@@ -9159,25 +9173,25 @@ The SDP3x is the world's smallest differential pressure sensor. It measures just
 </class>
 </classes>
 <parts>
-<part name="JP3" library="SparkFun" deviceset="STAND-OFF" device=""/>
-<part name="JP4" library="SparkFun" deviceset="STAND-OFF" device=""/>
-<part name="JP2" library="SparkFun" deviceset="FIDUCIAL" device="UFIDUCIAL"/>
-<part name="JP6" library="SparkFun" deviceset="FIDUCIAL" device="UFIDUCIAL"/>
+<part name="JP3" library="SparkFun-Hardware" deviceset="STAND-OFF" device=""/>
+<part name="JP4" library="SparkFun-Hardware" deviceset="STAND-OFF" device=""/>
+<part name="JP2" library="SparkFun-Aesthetics" deviceset="FIDUCIAL" device="UFIDUCIAL"/>
+<part name="JP6" library="SparkFun-Aesthetics" deviceset="FIDUCIAL" device="UFIDUCIAL"/>
 <part name="SUPPLY4" library="SparkFun-PowerSymbols" deviceset="3.3V" device=""/>
 <part name="J2" library="SparkFun-Connectors" deviceset="QWIIC_CONNECTOR" device="JS-1MM" value="QWIIC_RIGHT_ANGLE"/>
-<part name="GND6" library="SparkFun" deviceset="GND" device=""/>
+<part name="GND6" library="SparkFun-PowerSymbols" deviceset="GND" device=""/>
 <part name="SUPPLY7" library="SparkFun-PowerSymbols" deviceset="3.3V" device=""/>
-<part name="GND7" library="SparkFun" deviceset="GND" device=""/>
+<part name="GND7" library="SparkFun-PowerSymbols" deviceset="GND" device=""/>
 <part name="FRAME1" library="SparkFun-Aesthetics" deviceset="FRAME-LETTER" device=""/>
 <part name="SUPPLY8" library="SparkFun-PowerSymbols" deviceset="3.3V" device=""/>
 <part name="J4" library="SparkFun-Connectors" deviceset="QWIIC_CONNECTOR" device="JS-1MM" value="QWIIC_RIGHT_ANGLE"/>
-<part name="GND8" library="SparkFun" deviceset="GND" device=""/>
-<part name="JP1" library="SparkFun" deviceset="FIDUCIAL" device="UFIDUCIAL"/>
-<part name="JP5" library="SparkFun" deviceset="FIDUCIAL" device="UFIDUCIAL"/>
+<part name="GND8" library="SparkFun-PowerSymbols" deviceset="GND" device=""/>
+<part name="JP1" library="SparkFun-Aesthetics" deviceset="FIDUCIAL" device="UFIDUCIAL"/>
+<part name="JP5" library="SparkFun-Aesthetics" deviceset="FIDUCIAL" device="UFIDUCIAL"/>
 <part name="R3" library="SparkFun-Resistors" deviceset="1KOHM" device="-0603-1/10W-1%" value="1k"/>
 <part name="SUPPLY10" library="SparkFun-PowerSymbols" deviceset="3.3V" device=""/>
 <part name="D1" library="SparkFun-LED" deviceset="LED-RED" device="0603" value="RED"/>
-<part name="GND3" library="SparkFun" deviceset="GND" device=""/>
+<part name="GND3" library="SparkFun-PowerSymbols" deviceset="GND" device=""/>
 <part name="GND1" library="SparkFun-PowerSymbols" deviceset="GND" device=""/>
 <part name="R1" library="SparkFun-Resistors" deviceset="4.7KOHM" device="-0603-1/10W-1%" value="4.7k"/>
 <part name="R2" library="SparkFun-Resistors" deviceset="4.7KOHM" device="-0603-1/10W-1%" value="4.7k"/>
@@ -9186,20 +9200,20 @@ The SDP3x is the world's smallest differential pressure sensor. It measures just
 <part name="LOGO5" library="SparkFun-Aesthetics" deviceset="OSHW-LOGO" device="S"/>
 <part name="J1" library="SparkFun-Connectors" deviceset="CONN_04" device="1X04_NO_SILK"/>
 <part name="I2C" library="SparkFun-Jumpers" deviceset="JUMPER-SMT_3_2-NC_TRACE" device="_SILK" package3d_urn="urn:adsk.eagle:package:39289/1"/>
-<part name="GND2" library="SparkFun" deviceset="GND" device=""/>
+<part name="GND2" library="SparkFun-PowerSymbols" deviceset="GND" device=""/>
 <part name="C1" library="SparkFun-Capacitors" deviceset="0.1UF" device="-0603-25V-(+80/-20%)" value="0.1uF"/>
 <part name="SUPPLY3" library="SparkFun-PowerSymbols" deviceset="3.3V" device=""/>
 <part name="U$18" library="SparkX" deviceset="SPARKX-LOGO" device="3" value="SPARKX-LOGO3"/>
 <part name="LOGO1" library="SparkFun-Aesthetics" deviceset="SPECIAL_INSTRUCTIONS" device="-ORDERING"/>
-<part name="U1" library="New-Parts_SparkFun-Sensors" deviceset="SDP31" device="" value="SDP31"/>
+<part name="U1" library="SparkFun-Sensors" deviceset="SDP3X" device="_SDP31" value="SDP31"/>
 <part name="SUPPLY1" library="SparkFun-PowerSymbols" deviceset="3.3V" device=""/>
 <part name="J3" library="SparkFun-Connectors" deviceset="CONN_01" device="PTH_NO_SILK_YES_STOP"/>
 <part name="JP7" library="SparkFun-Jumpers" deviceset="JUMPER-SMT_2_NC_TRACE" device="_SILK" package3d_urn="urn:adsk.eagle:package:39281/1"/>
 <part name="JP8" library="SparkFun-Jumpers" deviceset="JUMPER-SMT_2_NO" device="_SILK" package3d_urn="urn:adsk.eagle:package:39279/1"/>
 <part name="JP9" library="SparkFun-Jumpers" deviceset="JUMPER-SMT_2_NO" device="_SILK" package3d_urn="urn:adsk.eagle:package:39279/1"/>
 <part name="GND4" library="SparkFun-PowerSymbols" deviceset="GND" device=""/>
-<part name="R4" library="New-Parts_SparkFun-Resistors" deviceset="1.2K" device="-0603-1/10W-1%" value="1.2K"/>
-<part name="R5" library="New-Parts_SparkFun-Resistors" deviceset="2.7K" device="-0603-1/10W-1%" value="2.7K"/>
+<part name="R4" library="SparkFun-Resistors" deviceset="1.20KOHM" device="-0603-1/10W-1%" value="1.20k"/>
+<part name="R5" library="SparkFun-Resistors" deviceset="2.7KOHM" device="-0603-1/10W-1%" value="2.7k"/>
 </parts>
 <sheets>
 <sheet>
@@ -9238,20 +9252,20 @@ Short JP8 or JP9</text>
 <instance part="JP2" gate="G$1" x="233.68" y="30.48" smashed="yes"/>
 <instance part="JP6" gate="G$1" x="236.22" y="30.48" smashed="yes"/>
 <instance part="SUPPLY4" gate="G$1" x="48.26" y="53.34" smashed="yes">
-<attribute name="VALUE" x="48.26" y="56.134" size="1.778" layer="96" font="vector" align="bottom-center"/>
+<attribute name="VALUE" x="48.26" y="56.134" size="1.778" layer="96" align="bottom-center"/>
 </instance>
 <instance part="J2" gate="G$1" x="58.42" y="45.72" smashed="yes" rot="MR0">
 <attribute name="VALUE" x="63.5" y="40.386" size="1.778" layer="96" font="vector" rot="MR0" align="top-left"/>
 <attribute name="NAME" x="63.5" y="53.594" size="1.778" layer="95" font="vector" rot="MR0"/>
 </instance>
 <instance part="GND6" gate="1" x="48.26" y="38.1" smashed="yes">
-<attribute name="VALUE" x="45.72" y="35.56" size="1.778" layer="96" font="vector"/>
+<attribute name="VALUE" x="45.72" y="35.56" size="1.778" layer="96"/>
 </instance>
 <instance part="SUPPLY7" gate="G$1" x="81.28" y="53.34" smashed="yes">
-<attribute name="VALUE" x="81.28" y="56.134" size="1.778" layer="96" font="vector" align="bottom-center"/>
+<attribute name="VALUE" x="81.28" y="56.134" size="1.778" layer="96" align="bottom-center"/>
 </instance>
 <instance part="GND7" gate="1" x="81.28" y="38.1" smashed="yes">
-<attribute name="VALUE" x="78.74" y="35.56" size="1.778" layer="96" font="vector"/>
+<attribute name="VALUE" x="78.74" y="35.56" size="1.778" layer="96"/>
 </instance>
 <instance part="FRAME1" gate="G$1" x="0" y="0" smashed="yes"/>
 <instance part="FRAME1" gate="V" x="147.32" y="0" smashed="yes">
@@ -9260,14 +9274,14 @@ Short JP8 or JP9</text>
 <attribute name="DRAWING_NAME" x="162.814" y="17.78" size="2.1844" layer="94" font="vector"/>
 </instance>
 <instance part="SUPPLY8" gate="G$1" x="48.26" y="25.4" smashed="yes">
-<attribute name="VALUE" x="48.26" y="28.194" size="1.778" layer="96" font="vector" align="bottom-center"/>
+<attribute name="VALUE" x="48.26" y="28.194" size="1.778" layer="96" align="bottom-center"/>
 </instance>
 <instance part="J4" gate="G$1" x="58.42" y="17.78" smashed="yes" rot="MR0">
 <attribute name="VALUE" x="63.5" y="12.446" size="1.778" layer="96" font="vector" rot="MR0" align="top-left"/>
 <attribute name="NAME" x="63.5" y="25.654" size="1.778" layer="95" font="vector" rot="MR0"/>
 </instance>
 <instance part="GND8" gate="1" x="48.26" y="10.16" smashed="yes">
-<attribute name="VALUE" x="45.72" y="7.62" size="1.778" layer="96" font="vector"/>
+<attribute name="VALUE" x="45.72" y="7.62" size="1.778" layer="96"/>
 </instance>
 <instance part="JP1" gate="G$1" x="236.22" y="27.94" smashed="yes"/>
 <instance part="JP5" gate="G$1" x="233.68" y="27.94" smashed="yes"/>
@@ -9276,17 +9290,17 @@ Short JP8 or JP9</text>
 <attribute name="VALUE" x="57.404" y="157.48" size="1.778" layer="96" font="vector" rot="R90" align="top-center"/>
 </instance>
 <instance part="SUPPLY10" gate="G$1" x="55.88" y="177.8" smashed="yes">
-<attribute name="VALUE" x="55.88" y="180.594" size="1.778" layer="96" font="vector" align="bottom-center"/>
+<attribute name="VALUE" x="55.88" y="180.594" size="1.778" layer="96" align="bottom-center"/>
 </instance>
 <instance part="D1" gate="G$1" x="55.88" y="147.32" smashed="yes">
 <attribute name="NAME" x="52.451" y="142.748" size="1.778" layer="95" font="vector" rot="R90"/>
 <attribute name="VALUE" x="57.785" y="142.748" size="1.778" layer="96" font="vector" rot="R90" align="top-left"/>
 </instance>
 <instance part="GND3" gate="1" x="55.88" y="137.16" smashed="yes">
-<attribute name="VALUE" x="53.34" y="134.62" size="1.778" layer="96" font="vector"/>
+<attribute name="VALUE" x="53.34" y="134.62" size="1.778" layer="96"/>
 </instance>
 <instance part="GND1" gate="1" x="48.26" y="86.36" smashed="yes">
-<attribute name="VALUE" x="48.26" y="86.106" size="1.778" layer="96" font="vector" align="top-center"/>
+<attribute name="VALUE" x="48.26" y="86.106" size="1.778" layer="96" align="top-center"/>
 </instance>
 <instance part="R1" gate="G$1" x="177.8" y="149.86" smashed="yes" rot="R90">
 <attribute name="NAME" x="176.276" y="149.86" size="1.778" layer="95" font="vector" rot="R90" align="bottom-center"/>
@@ -9297,7 +9311,7 @@ Short JP8 or JP9</text>
 <attribute name="VALUE" x="194.564" y="149.86" size="1.778" layer="96" font="vector" rot="R90" align="top-center"/>
 </instance>
 <instance part="SUPPLY9" gate="G$1" x="185.42" y="165.1" smashed="yes">
-<attribute name="VALUE" x="185.42" y="167.894" size="1.778" layer="96" font="vector" align="bottom-center"/>
+<attribute name="VALUE" x="185.42" y="167.894" size="1.778" layer="96" align="bottom-center"/>
 </instance>
 <instance part="PWR" gate="G$1" x="55.88" y="170.18" smashed="yes" rot="R90">
 <attribute name="NAME" x="58.42" y="172.72" size="1.778" layer="95" font="vector"/>
@@ -9311,23 +9325,23 @@ Short JP8 or JP9</text>
 <attribute name="NAME" x="182.88" y="152.781" size="1.778" layer="95" font="vector"/>
 </instance>
 <instance part="GND2" gate="1" x="22.86" y="86.36" smashed="yes">
-<attribute name="VALUE" x="20.32" y="83.82" size="1.778" layer="96" font="vector"/>
+<attribute name="VALUE" x="20.32" y="83.82" size="1.778" layer="96"/>
 </instance>
 <instance part="C1" gate="G$1" x="22.86" y="93.98" smashed="yes">
 <attribute name="NAME" x="24.384" y="96.901" size="1.778" layer="95" font="vector"/>
 <attribute name="VALUE" x="24.384" y="91.821" size="1.778" layer="96" font="vector"/>
 </instance>
 <instance part="SUPPLY3" gate="G$1" x="22.86" y="101.6" smashed="yes">
-<attribute name="VALUE" x="22.86" y="104.394" size="1.778" layer="96" font="vector" align="bottom-center"/>
+<attribute name="VALUE" x="22.86" y="104.394" size="1.778" layer="96" align="bottom-center"/>
 </instance>
 <instance part="U$18" gate="G$1" x="213.36" y="53.34" smashed="yes"/>
 <instance part="LOGO1" gate="G$1" x="226.06" y="35.56" smashed="yes"/>
 <instance part="U1" gate="G$1" x="60.96" y="96.52" smashed="yes">
-<attribute name="NAME" x="59.69" y="102.108" size="1.778" layer="95"/>
-<attribute name="VALUE" x="57.15" y="86.614" size="1.778" layer="96"/>
+<attribute name="NAME" x="53.34" y="101.6" size="1.778" layer="95"/>
+<attribute name="VALUE" x="53.34" y="86.614" size="1.778" layer="96"/>
 </instance>
 <instance part="SUPPLY1" gate="G$1" x="48.26" y="101.6" smashed="yes">
-<attribute name="VALUE" x="48.26" y="104.394" size="1.778" layer="96" font="vector" align="bottom-center"/>
+<attribute name="VALUE" x="48.26" y="104.394" size="1.778" layer="96" align="bottom-center"/>
 </instance>
 <instance part="J3" gate="G$1" x="91.44" y="22.86" smashed="yes" rot="R180">
 <attribute name="VALUE" x="93.98" y="27.686" size="1.778" layer="96" font="vector" rot="R180"/>
@@ -9343,7 +9357,7 @@ Short JP8 or JP9</text>
 <attribute name="NAME" x="167.64" y="86.36" size="1.778" layer="95" font="vector"/>
 </instance>
 <instance part="GND4" gate="1" x="177.8" y="78.74" smashed="yes">
-<attribute name="VALUE" x="177.8" y="78.486" size="1.778" layer="96" font="vector" align="top-center"/>
+<attribute name="VALUE" x="177.8" y="78.486" size="1.778" layer="96" align="top-center"/>
 </instance>
 <instance part="R4" gate="G$1" x="157.48" y="91.44" smashed="yes">
 <attribute name="NAME" x="157.48" y="92.964" size="1.778" layer="95" font="vector" align="bottom-center"/>
